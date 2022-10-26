@@ -10,7 +10,6 @@ import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'package:flutter_test/flutter_test.dart';
 import 'package:platform/platform.dart';
 
@@ -103,6 +102,29 @@ void main() {
 
     await expectLater(find.byType(Wrap), matchesGoldenFile('test.icons.sample2.png'));
   }, skip: isBrowser); // https://github.com/flutter/flutter/issues/39998
+<<<<<<< HEAD
+=======
+
+  testWidgets('Another sample of icons look as expected', (WidgetTester tester) async {
+    await _loadIconFont();
+
+    await tester.pumpWidget(MaterialApp(
+      home: IconTheme(
+        data: const IconThemeData(size: 200),
+        child: Wrap(
+          children: const <Icon>[
+            Icon(Icons.electric_bolt),
+            Icon(Icons.electric_bolt_outlined),
+            Icon(Icons.electric_bolt_rounded),
+            Icon(Icons.electric_bolt_sharp),
+          ],
+        ),
+      ),
+    ));
+
+    await expectLater(find.byType(Wrap), matchesGoldenFile('test.icons.sample3.png'));
+  }, skip: isBrowser); // https://github.com/flutter/flutter/issues/39998
+>>>>>>> 6928314d505d2bb4777be05e45d7808a5aa91d2a
 }
 
 // Loads the cached material icon font.
