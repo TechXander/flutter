@@ -250,7 +250,7 @@ class Container extends StatelessWidget {
   /// it would potentially result in the decoration drawing over the background
   /// color. To supply a decoration with a color, use `decoration:
   /// BoxDecoration(color: color)`.
-  Container({
+Container({
     Key? key,
     this.alignment,
     this.padding,
